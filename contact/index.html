@@ -41,9 +41,6 @@ button[type=submit]:hover {
 <body>
 
 <div class="container">
-  <input type="hidden" name="_subject" value="New Contact Form Submission">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_autoresponse" value="Thank you for contacting me. I will be in touch with you soon.">
   <form action="https://formsubmit.co/adamrayliffe@gmail.com" method="POST">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -59,7 +56,9 @@ button[type=submit]:hover {
     
     <label for="message">Message</label>
     <textarea id="message" name="message" placeholder="Write your message here.." style="height:200px"></textarea>
-
+  <input type="hidden" name="_subject" value="New Contact Form Submission">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_autoresponse" value="Thank you for contacting me. I will be in touch with you soon.">
     <button type="submit">Send</button>
   </form>
 </div>
