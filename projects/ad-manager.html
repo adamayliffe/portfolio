@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AD Manager Project | My Portfolio</title>
     <link rel="stylesheet" href="../assets/css/main.css">
+        <style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
 </head>
 <body>
     <header>
@@ -43,15 +58,40 @@
             <li>My SQL as a database platform</li>
         </ul>
         <br><br>
-        <b>server ports to open on firewall</b>
-        <br>
-        <b>8080/443</b>for HTTP&HTTPS Necessary to connect to the Tomcat web server <br>
-        <b>33306</b>for To connect to the product database <br>
-        <b>9280</b>for To connect to the Elasticsearch database <br>
-        <b>9380</b>Used for communications between nodes in a cluster
-        <br><br>
-        
 </p>
+<br><br>
+
+<p><b>server ports to open on firewall</b></p>
+<br><br>
+    <table>
+  <tr>
+    <th>Port Number</th>
+    <th>Protocol</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>8080/443</td>
+    <td>HTTP/HTTPS</td>
+    <td>Necessary to connect to the Tomcat web server</td>
+  </tr>
+  <tr>
+    <td>33306</td>
+    <td>TCP</td>
+    <td>To connect to the product database</td>
+  </tr>
+  <tr>
+    <td>9280</td>
+    <td>HTTP</td>
+    <td>To connect to the Elasticsearch database</td>
+  </tr>
+  <tr>
+    <td>9380</td>
+    <td>TCP</td>
+    <td>Used for communications between nodes in a cluster</td>
+  </tr>
+</table>
+
+
 <h2>Date of completion</h2>
 <br>
 <p>
