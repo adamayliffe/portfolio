@@ -90,7 +90,127 @@ th, td {
   <p><b>System ports</b><br>
 Allow outbound connections to ports on the source server and inbound connections to ports on the target servers </p>
 <br>
+<table>
+  <tr>
+    <th>Port Number</th>
+    <th>Protocol</th>
+    <th>Destination</th>
+    <th>Service</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>389/636</td>
+    <td>TCP/UDP</td>
+    <td>Domain Controller</td>
+    <td>LDAP</td>
+    <td>To connect to Active Directory</td>
+  </tr>
+   <tr>
+    <td>135</td>
+    <td>TCP</td>
+    <td>Domain Controller</td>
+    <td>RPC</td>
+    <td>For data exchange</td>
+  </tr>
+  <tr>
+    <td>445</td>
+    <td>TCP/UDP</td>
+    <td>Domain Controller</td>
+    <td>SMB</td>
+    <td>To get access to shared file systems</td>
+  </tr>
+  <tr>
+    <td>88</td>
+    <td>TCP</td>
+    <td>Domain Controller</td>
+    <td>Kerberos</td>
+    <td>For authentication when accessing a domain resource</td>
+  </tr>
+<tr>
+    <td>139</td>
+    <td>TCP</td>
+    <td>Domain Controller</td>
+    <td>NetBIOS session</td>
+    <td>Required for communicating within the network</td>
+  </tr>
+   <tr>
+    <td>3268/3269</td>
+    <td>TCP</td>
+    <td>Domain Controller</td>
+    <td>Global Catalog</td>
+    <td>Necessary for performing search operations in the Global Catalog</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>SMTP</td>
+    <td>SMTP Server</td>
+    <td>SMTP</td>
+    <td>To send emails</td>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>HTTP</td>
+    <td>Domain Controller</td>
+    <td>Exchange</td>
+    <td>For connecting to Exchange servers</td>
+  </tr>
+<tr>
+    <td>80/443</td>
+    <td>HTTP/HTTPS</td>
+    <td>Microsoft 365 or Google Workspace servers</td>
+    <td>Microsoft 365 and Google Workspace</td>
+    <td>Required for communicating with Microsoft 365 and Google Workspace platforms</td>
+  </tr>
+   <tr>
+    <td>49152-65535</td>
+    <td>TCP</td>
+    <td>RPC randomly allocated high TCP ports</td>
+    <td>RPC</td>
+    <td>Used to establish data exchange</td>
+  </tr>
+  <tr>
+    <td>464</td>
+    <td>TCP / UDP</td>
+    <td>Domain Controller</td>
+    <td>Kerberos</td>
+    <td>To change or set user passwords</td>
+  </tr>
+  <tr>
+    <td>5985/5986</td>
+    <td>TCP</td>
+    <td>Domain Controller</td>
+    <td>Powershell Remoting</td>
+    <td>For executing reports and management actions that involve running commands on DCs</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<p>
+  Once the above firewall ports are opened and allowed for communicating to AD Manager, this is where the installation begins.
+</p>
+<p>
+  Firstly go to <a href="http://www.admanagerplus.com/">www.admanagerplus.com</a> and download the PXE file <br>
+  Once the file has successfully downloaded right-click and run as administrator <br>
+  Agree to the installation, put installation in a network share that is suitable for you then press next <br>
+  This section is where you can change the management port the default port is 8080, however you can have any port you prefer. <br>
+  The next section is for the folder & shortcut, here you need to choose the AD Manager Plus option <br>
+  <br>
+  Once you have installed the AD Manager Plus software onto your server you have to do the following in order for AD Manager Plus to start <br>
+  1. Go to Start → All Programs → ADManager Plus → Install ADMP Service.<br>
+  2. Go to Run → Services.msc → Right-click ManageEngine ADManager Plus → Start. <br>
+  <br>
+  Once you have confirmed the service is running and the AMDP service is installed you can then browse to your AD Manager Plus server.<br><br>
 
+  To access your server do the following: <br>
+  1. Open a internet browser as stated before either Google Chrome or Microsoft Edge. (on the server) <br>
+  2. Type in: localhost:8080 (or the port you programmed AD Manager to talk on). <br><br>
+  
+  After that you will then be able to start configuring the AD Manager <br>
+  Default login creds: <br>
+  U/N: admin <br>
+  P/W: admin <br>
+</p>
     </main>
 <br>
 <br>
